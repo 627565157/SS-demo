@@ -9,10 +9,56 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import javax.net.ssl.*;
+import java.io.IOException;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
+
 @SpringBootApplication
 public class SsDemoApplication extends WebMvcConfigurerAdapter {
 
-    public static void main(String[] args) {
+    static TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
+        @Override
+        public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+            // TODO Auto-generated method stub
+        }
+
+        @Override
+        public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+            // TODO Auto-generated method stub
+        }
+
+        @Override
+        public X509Certificate[] getAcceptedIssuers() {
+            // TODO Auto-generated method stub
+            return null;
+        }
+    } };
+
+    public class NullHostNameVerifier implements HostnameVerifier {
+        /*
+         * (non-Javadoc)
+         *
+         * @see javax.net.ssl.HostnameVerifier#verify(java.lang.String,
+         * javax.net.ssl.SSLSession)
+         */
+        @Override
+        public boolean verify(String arg0, SSLSession arg1) {
+            // TODO Auto-generated method stub
+            return true;
+        }
+    }
+
+
+    public static void main(String[] args) throws IOException, KeyManagementException, NoSuchAlgorithmException {
+        HttpsURLConnection.setDefaultHostnameVerifier(new SsDemoApplication().new NullHostNameVerifier());
+        SSLContext sc = SSLContext.getInstance("TLS");
+        sc.init(null, trustAllCerts, new SecureRandom());
+        HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+
         SpringApplication.run(SsDemoApplication.class, args);
     }
 
