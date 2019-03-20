@@ -1,4 +1,4 @@
-package com.star.demo.ssdemo.controller;
+package com.demo.ssdemo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;

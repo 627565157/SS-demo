@@ -1,7 +1,7 @@
-package com.star.demo.ssdemo.dao;
+package com.demo.ssdemo.dao;
 
 
-import com.star.demo.ssdemo.entity.User;
+import com.demo.ssdemo.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

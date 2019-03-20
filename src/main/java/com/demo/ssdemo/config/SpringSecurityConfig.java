@@ -1,6 +1,6 @@
-package com.star.demo.ssdemo.config;
+package com.demo.ssdemo.config;
 
-import com.star.demo.ssdemo.service.UserDetailsServiceImpl;
+import com.demo.ssdemo.service.UserDetailsServiceImpl;
 import org.jasig.cas.client.session.SingleSignOutFilter;
 import org.jasig.cas.client.validation.Cas20ServiceTicketValidator;
 import org.springframework.beans.factory.annotation.Autowired;

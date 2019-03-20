@@ -1,4 +1,4 @@
-package com.star.demo.ssdemo.config;
+package com.demo.ssdemo.config;
 
 
 import org.springframework.beans.factory.annotation.Value;

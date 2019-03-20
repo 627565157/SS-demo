@@ -1,7 +1,7 @@
-package com.star.demo.ssdemo.service;
+package com.demo.ssdemo.service;
 
-import com.star.demo.ssdemo.dao.UserDao;
-import com.star.demo.ssdemo.entity.User;
+import com.demo.ssdemo.dao.UserDao;
+import com.demo.ssdemo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

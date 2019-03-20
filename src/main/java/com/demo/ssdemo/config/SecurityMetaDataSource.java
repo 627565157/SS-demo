@@ -1,7 +1,7 @@
-package com.star.demo.ssdemo.config;
+package com.demo.ssdemo.config;
 
-import com.star.demo.ssdemo.entity.Resource;
-import com.star.demo.ssdemo.service.ResourceService;
+import com.demo.ssdemo.entity.Resource;
+import com.demo.ssdemo.service.ResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.ConfigAttribute;
 import org.springframework.security.access.SecurityConfig;

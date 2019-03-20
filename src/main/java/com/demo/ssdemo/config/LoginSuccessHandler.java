@@ -1,8 +1,7 @@
-package com.star.demo.ssdemo.config;
+package com.demo.ssdemo.config;
 
-import com.star.demo.ssdemo.entity.User;
+import com.demo.ssdemo.entity.User;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
 
 import javax.servlet.ServletException;

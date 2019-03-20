@@ -1,4 +1,4 @@
-package com.star.demo.ssdemo;
+package com.demo.ssdemo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

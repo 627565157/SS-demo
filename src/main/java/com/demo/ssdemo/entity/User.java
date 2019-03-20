@@ -1,4 +1,4 @@
-package com.star.demo.ssdemo.entity;
+package com.demo.ssdemo.entity;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

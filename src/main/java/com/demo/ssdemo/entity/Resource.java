@@ -1,4 +1,4 @@
-package com.star.demo.ssdemo.entity;
+package com.demo.ssdemo.entity;
 
 
 import javax.persistence.*;
